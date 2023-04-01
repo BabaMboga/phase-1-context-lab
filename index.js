@@ -1,13 +1,8 @@
 /* Your Code Here */
 
-/*
- We're giving you this function. Take a look at it, you might see some usage
- that's new and different. That's because we're avoiding a well-known, but
- sneaky bug that we'll cover in the next few lessons!
+    
 
- As a result, the lessons for this function will pass *and* it will be available
- for you to use if you need it!
- */
+
  function createEmployeeRecord(employeeData) {
     return {
       firstName: employeeData[0],
@@ -15,8 +10,8 @@
       title: employeeData[2],
       payPerHour: employeeData[3],
       timeInEvents: [],
-      timeOutEvents: []
-    };
+      timeOutEvents: [],
+      };
   }
   
   function createEmployeeRecords(employeesData) {
@@ -24,26 +19,30 @@
   }
   
   function createTimeInEvent(employeeRecord, dateStamp) {
-    const [date, hour] = dateStamp.split(" ");
-  
-    employeeRecord.timeInEvents.push({
+       
+    const  [date, hour]  = dateStamp.split(" ");
+      
+    
+    employeeRecord.timeInEvent.push({
       type: "TimeIn",
-      hour: parseInt(hour),
+      hour: parseInt(hour, 10),
       date
     });
   
     return employeeRecord;
   }
+ 
   
   function createTimeOutEvent(employeeRecord, dateStamp) {
-    const [date, hour] = dateStamp.split(" ");
+    
+    const [date, hour] = dateStamp.split(' ');
   
     employeeRecord.timeOutEvents.push({
       type: "TimeOut",
       hour: parseInt(hour),
       date
     });
-  
+
     return employeeRecord;
   }
   
